@@ -1,0 +1,181 @@
+/* FIRST LAYOUT */
+
+#one {
+    width: 80%;
+    height: 150px;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "div1 div1 div2 div2"
+    "div3 div4 div4 div4"
+    "div5 div5 div5 div5";
+    grid-gap: 10px;
+}
+
+#one .one {
+    grid-area: div1;
+    background-color: red;
+    border-radius: 5px;
+}
+
+#one .two {
+    grid-area: div2;
+    background-color: blue;
+    border-radius: 5px;
+}
+
+#one .three {
+    grid-area: div3;
+    background-color: green;
+    border-radius: 5px;
+}
+
+#one .four {
+    grid-area: div4;
+    background-color: purple;
+    border-radius: 5px;
+}
+
+#one .five {
+    grid-area: div5;
+    background-color: yellow;
+    border-radius: 5px;
+}
+
+
+/* SECOND LAYOUT */
+
+#two {
+    width: 80%;
+    height: 300px;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "div1 div1 div1 div1"
+    "div2 div2 div3 div3"
+    "div2 div2 div4 div5";
+    grid-gap: 10px;
+}
+
+#two .one {
+    grid-area: div1;
+    background-color: red;
+    border-radius: 5px;
+}
+
+#two .two {
+    grid-area: div2;
+    background-color: blue;
+    border-radius: 5px;
+}
+
+#two .three {
+    grid-area: div3;
+    background-color: green;
+    border-radius: 5px;
+}
+
+#two .four {
+    grid-area: div4;
+    background-color: purple;
+    border-radius: 5px;
+}
+
+#two .five {
+    grid-area: div5;
+    background-color: purple;
+    border-radius: 5px;
+}
+
+
+/* RESPONSIVE LAYOUT */
+
+/* LAPTOP */
+
+#three {
+    width: 80%;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas: 
+    "header header header header"
+    "sidebar content content sidebar2"
+    "footer footer footer footer";
+    grid-gap: 30px;
+}
+
+#three header {
+    grid-area: header;
+    background-color: #999;
+    color: white;
+    border-radius: 5px;
+    padding-left: 20px;
+}
+
+#three sidebar {
+    grid-area: sidebar;
+    background-color: #444;
+    color: white;
+    border-radius: 5px;
+    padding-left: 20px;
+}
+
+#three content {
+    grid-area: content;
+    background-color: #444;
+    color: white;
+    border-radius: 5px;
+    padding-left: 20px;
+}
+
+#three sidebar2 {
+    grid-area: sidebar2;
+    background-color: #ccc;
+    color: white;
+    border-radius: 5px;
+    padding-left: 20px;
+}
+
+#three footer {
+    grid-area: footer;
+    background-color: #999;
+    color: white;
+    border-radius: 5px;
+    padding-left: 20px;
+}
+
+
+/* TABLET */
+
+@media only screen and (max-width: 1000px) {
+    #three {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 2fr 1fr 1fr;
+        grid-template-areas:
+        "header header header header"
+        "sidebar content content content"
+        "sidebar2 sidebar2 sidebar2 sidebar2"
+        "footer footer footer footer"
+    }
+}
+
+
+/* PHONE */
+
+@media only screen and (max-width: 500px) {
+    #three {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 2fr 1fr 1fr;
+        grid-template-areas:
+        "header"
+        "sidebar"
+        "content"
+        "sidebar2"
+        "footer"
+    }
+}
